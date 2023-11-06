@@ -1,0 +1,511 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #070707;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  }
+
+.main-list-reservation, #send-reservation, .back-button{
+  background-color: black;
+  color: white;
+  border-radius: 0.45rem;
+  border: none;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.main-list-reservation:hover, #send-reservation:hover, .back-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: color .15s ease-in-out;
+}
+
+h1,
+h2,
+.logo {
+  font-family: 'Great Vibes', cursive;
+}
+
+h2 {
+  font-size: 3rem;
+}
+  
+h3 {
+  font-size: 1.5rem;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  color: #000;
+  opacity: 0.85;
+  height: 3rem;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+  text-shadow: 0.125rem 0.125rem white ;
+}
+
+.menu-items a:hover {
+  color: #141313;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  color: #000000 ;
+  font-weight: bold;
+  text-shadow: 0.125rem 0.125rem white ;
+}
+
+.showcase-area {
+  background: url(./showcase_area_background.jpg)  no-repeat 100% center/cover;
+  background-position-y: 5%;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-container {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: hsla(100,0%,0%,.5);
+  font-size: 1.6rem;
+}
+
+.showcase-container  h1 {
+  font-size: 7rem;
+  color: #d4c95e;
+  margin-bottom: 0;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 3rem;
+  letter-spacing: .15rem;
+  color: #f1eee7;
+}
+
+.main-title::after {
+  display: block;
+  content: "";
+  background-color: rgb(0, 0, 0);
+  height: 0.2rem;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+
+.date {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  vertical-align: middle;
+  color: #f1eee7;
+}
+
+.date::before, .date::after {
+  display: inline-block;
+  content: "";
+  background-color: #fff;
+  height: 0.1rem;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.profile-card {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 0.25rem;
+  box-shadow: hsla(0, 0%, 0%, 0.8) 0.625rem 0.625rem 5rem;
+  display: inline;
+  margin-right: 2rem;
+}
+
+.profile-image {
+  margin-top: -3.75rem;
+}
+
+#reservation{
+  display: flex;
+}
+
+#bordered {
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625rem;
+  border-top-style: solid;
+  border-top-width: 0.0625rem;
+}
+
+#reservation-datas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+input[type="date"]{
+  background-color: #101111;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
+  font-family: "Roboto Mono",monospace;
+  color: #ffffff;
+  font-size: 1.125rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3125rem;
+}
+
+.chosen-dates { 
+  list-style-type: none;
+  border: 0.125rem solid #000;
+  border-radius: 0.25rem;
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  margin: 0.625rem;
+  color: rgb(252, 247, 247);
+  background-color: #101111;
+  cursor: pointer;
+}
+
+.marked  {
+  background-color: rgb(79, 21, 21);
+}
+
+.reserved{
+  background-color: rgb(128, 14, 14);
+  pointer-events: none;
+}
+
+.main-div{
+  margin-bottom: 0.625rem;
+  border: 0.125rem solid #000;
+  border-radius: 0.25rem;
+}
+
+.main-div p {
+  font-weight: bold;
+}
+
+.delete {
+  display: block;
+  border: 0.125rem solid #000;
+  padding: 0 0.125rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.delete:hover {
+  color: rgb(79, 21, 21);
+};
+
+#datum {
+  width: 6rem;
+}
+
+#ora {
+  width: 6rem;
+}
+
+img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  padding: 0.0625rem;
+  background-color: #666;
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: grayscale(60%);
+}
+
+.head,
+.about {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.content {
+  padding: 5% 10%;
+  border-top: 0.0625rem solid hsla(0, 0%, 30%, 0.8);
+  display: grid;
+}
+
+img:hover {
+  transform: scale(1.1);
+  filter: grayscale(60%);
+}
+
+i {
+  color: rgb(43, 48, 44);
+}
+
+p,
+button {
+  font-family: "Fauna One";
+  color: #3f3a41;
+}
+
+.head,
+.content-time, .content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content-time {
+  padding: 5% 10%;
+  display: block;
+}
+
+input[type="text"] {
+  border: 0.1875rem solid #ccc;
+  border-radius: 0.1875rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 0.18rem solid #555;;
+}
+
+  @media (max-width: 768px) {
+    .navbar {
+      opacity: 0.95;
+    }
+
+    .container {
+      display: block;
+    }
+
+    .showcase-container {
+      width: inherit;
+    }
+
+    .showcase-container p {
+        font-size: 2.15rem;
+    }
+  
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines {
+      display: block;
+    }
+  
+    .navbar-container {
+      display: block;
+      position: relative;
+      height: 4rem;
+    }
+  
+    .navbar-container input[type="checkbox"] {
+      position: absolute;
+      display: block;
+      height: 2rem;
+      width: 1.95rem;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 5;
+      opacity: 0;
+    }
+  
+    .navbar-container .hamburger-lines {
+      display: block;
+      height: 1.5rem;
+      width: 2.2rem;
+      position: absolute;
+      top: 1rem;
+      left: 1.25rem;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .navbar-container .hamburger-lines .line {
+      display: block;
+      height: 0.25rem;
+      width: 100%;
+      border-radius: 0.65rem;
+      background-color: #000000;
+    }
+  
+    .navbar-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+  
+    .navbar-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  
+    .navbar .menu-items {
+      padding-top: 6.25rem;
+      background: #fff;
+      height: 100vh;
+      max-width: 12.5rem;
+      transform: translate(-150%);
+      display: flex;
+      flex-direction: column;
+      margin-left: -2.5rem;
+      padding-left: 0.625rem;
+      transition: transform 0.5s ease-in-out;
+      box-shadow: 0.3125rem 0rem 0.625rem 0rem #aaa;
+    }
+  
+    .navbar .menu-items li {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+  
+    .logo {
+      position: absolute;
+      top: 0.3125rem;
+      right: 0.9375rem;
+      font-size: 2rem;
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+      transform: translateX(0);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(35deg);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+    }
+  
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-35deg);
+    }
+
+    #container {
+      display: block;
+    }
+
+    .profile-card {
+      display: block;
+      margin: 5rem 2rem;
+    }
+
+    .profile-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .profile-card h1 {
+      font-size: 2rem;
+    }
+
+    #reservation {
+      display: block;
+    }
+
+    #reservation-datas {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .div-date {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .chosen-dates{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #nev{
+      margin-top: 1rem;
+      margin-bottom:1rem;
+    }
+
+    #ora{
+      margin-top: 1rem;
+      margin-bottom:1rem;
+    }
+
+    .time-card{
+      margin-bottom: 8rem;
+    }
+
+    .logo {
+      display: none;
+    }
+}
